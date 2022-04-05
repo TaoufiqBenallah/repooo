@@ -1,0 +1,114 @@
+{
+  "workflowApiVersion": "1.1",
+  "metaData": {
+    "icon": "images/icon.png",
+    "isConfigured": false,
+    "configurationDisabled": false,
+    "configOnDrop": false
+  },
+  "copySettings": {
+    "allowCopy": true,
+    "displayCopyNotification": true
+  },
+  "type": "REST",
+  "lang": {
+    "en-US": {
+      "description": "$DESCRIPTION"
+    }
+  },
+  "arguments": {
+    "execute": {
+      "url": "https://$DOMAIN/activity/execute",
+      "verb": "POST",
+      "body": "",
+      "header": "",
+      "format": "json",
+      "useJwt": true,
+      "timeout": "$TIMEOUT",
+      "retryCount": "$RETRY_COUNT",
+      "retryDelay": "$RETRY_DELAY",
+      "concurrentRequests": "$CONCURRENT_REQUESTS",
+      "inArguments": [],
+      "outArguments": [
+        {
+          "status": ""
+        },
+        {
+          "errMsg": ""
+        }
+      ]
+    }
+  },
+  "configurationArguments": {
+    "save": {
+      "url": "https://$DOMAIN/activity/save",
+      "verb": "POST",
+      "useJwt": true
+    },
+    "validate": {
+      "url": "https://$DOMAIN/activity/validate",
+      "verb": "POST",
+      "useJwt": true
+    },
+    "publish": {
+      "url": "https://$DOMAIN/activity/publish",
+      "verb": "POST",
+      "useJwt": true
+    },
+    "unpublish": {
+      "url": "https://$DOMAIN/activity/unpublish",
+      "verb": "POST",
+      "useJwt": true
+    },
+    "stop": {
+      "url": "https://$DOMAIN/activity/stop",
+      "verb": "POST",
+      "useJwt": true
+    },
+    "TestSave": {
+      "url": "https://$DOMAIN/activity/testsave",
+      "verb": "POST",
+      "useJwt": true
+    }
+  },
+  "userInterfaces": {
+    "configInspector": {
+      "hideHeader": true,
+      "size": "scm-sm"
+    },
+    "configModal": {
+      "height": 200,
+      "width": 300
+    },
+    "runningHover": {
+      "url": "https://$DOMAIN/runningHover.html"
+    },
+    "runningModal": {
+      "url": "https://$DOMAIN/runningModal.html"
+    }
+  },
+  "schema": {
+    "arguments": {
+      "execute": {
+        "outArguments": [
+          {
+            "status": {
+              "dataType": "Text",
+              "isNullable": true,
+              "access": "Visible",
+              "direction": "Out"
+            }
+          },
+          {
+            "errMsg": {
+              "dataType": "Text",
+              "isNullable": true,
+              "access": "Visible",
+              "direction": "Out"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

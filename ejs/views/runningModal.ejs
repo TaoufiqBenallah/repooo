@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/styles/salesforce-lightning-design-system.min.css" />
+    <link rel="stylesheet" href="/styles/custom.css" />
+    <script src="javascript/libs/jquery.min.js"></script>
+    <script src="javascript/libs/postmonger.js"></script>
+    <script src="javascript/runningModal.js" defer></script>
+    <title>RunningModal</title>
+  </head>
+  <body>
+    <input type="hidden" id="access_token" value="<%=accessToken %>"></input>
+
+    <div id="inArguments" class="slds-box slds-m-bottom_medium">
+      <h3>Activity Payload</h3>
+    </div>
+
+    <div id="settings" class="slds-box slds-m-bottom_medium">
+      <h3>Activity Settings</h3>
+      <label class="slds-form-element__label slds-p-top_medium">Timeout</label>
+      <input id="timeout" type="number" class="slds-input ca-config" name="timeout" disabled />
+
+      <label class="slds-form-element__label slds-p-top_medium">Retry Count</label>
+      <input
+        id="retryCount"
+        type="number"
+        class="slds-input ca-config"
+        name="retryCount"
+        disabled
+      />
+
+      <label class="slds-form-element__label slds-p-top_medium">Retry Delay</label>
+      <input
+        id="retryDelay"
+        type="number"
+        class="slds-input ca-config"
+        name="retryDelay"
+        disabled
+      />
+
+      <label class="slds-form-element__label slds-p-top_medium">Concurrent Requests</label>
+      <input
+        id="concurrentRequests"
+        type="number"
+        class="slds-input ca-config"
+        name="concurrentRequests"
+        disabled
+      />
+    </div>
+
+    <div id="outArgs" class="slds-box slds-m-bottom_medium">
+      <h3>Activity OutArguments</h3>
+      <span id="outArgsSpan" class="slds-form-element__span slds-p-top_medium">No OutArgs</span>
+    </div>
+
+    <button
+      id="done"
+      type="button"
+      class="slds-button slds-button_brand slds-align_absolute-center"
+    >
+      Done
+    </button>
+  </body>
+</html>

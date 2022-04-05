@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/styles/salesforce-lightning-design-system.min.css" />
+    <link rel="stylesheet" href="/styles/custom.css" />
+    <script src="javascript/libs/jquery.min.js"></script>
+    <script src="javascript/libs/postmonger.js"></script>
+    <script src="javascript/runningHover.js" defer></script>
+    <title>RunningHover</title>
+  </head>
+  <body>
+    <input type="hidden" id="access_token" value="<%=accessToken %>"></input>
+
+    <h3 class="slds-p-top_medium slds-align_absolute-center">Activity Id:</h3>
+    <p id="activityId" class="slds-align_absolute-center text-small"></p>
+
+    <h3 class="slds-p-top_medium slds-align_absolute-center">Activity Key:</h3>
+    <p id="activityKey" class="slds-align_absolute-center"></p>
+
+    <h3 class="slds-p-top_medium slds-align_absolute-center">Data Binding for OutArguments:</h3>
+    <p id="outArguments" class="slds-align_absolute-center"></p>
+  </body>
+</html>

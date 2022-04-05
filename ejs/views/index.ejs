@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="/styles/salesforce-lightning-design-system.min.css" />
+  <link rel="stylesheet" href="/styles/custom.css" />
+  <script src="javascript/libs/jquery.min.js"></script>
+  <script src="javascript/libs/jquery.validate.min.js"></script>
+  <script src="javascript/libs/postmonger.js"></script>
+  <script src="javascript/library.js"></script>
+  <script src="javascript/customActivity.js" defer></script>
+  <title>
+    <%=title %>
+  </title>
+</head>
+
+<body id="body">
+  <input type="hidden" id="access_token" value="<%=accessToken %>"></input>
+
+  <article class="slds-card">
+    <div class="slds-card__header slds-grid">
+      <header class="slds-media slds-media_center slds-has-flexi-truncate">
+        <div class="slds-media__body">
+          <h2 class="slds-card__header-title">
+            <a class="slds-card__header-link slds-truncate"><span>LOGGER ACTIVITY
+              </span></a>
+          </h2>
+        </div>
+      </header>
+    </div>
+  </article>
+
+  <div class="form">
+    <div class="form__container">
+      <div class="form__field">
+        <div class="form__field--label">
+          <label>Campaign ID</label>
+        </div>
+        <div class="form__field--input">
+          <input type="text" id="campaign-id">
+        </div>
+      </div>
+      <div class="form__field">
+        <div class="form__field--label">
+          <label>Control Group</label>
+        </div>
+        <div class="form__field--input-drop">
+          <input class="form__field--text" type="text" id="control-group-k" value="False" readonly>
+          <span class="form__field--icon" id="control-group-s">
+            &#8249;</span>
+          <div id="control-group" class="form__field--input-search-box"></div>
+        </div>
+      </div>
+      <div class="form__field">
+        <div class="form__field--label">
+          <label>Type of offer</label>
+        </div>
+        <div class="form__field--input-drop">
+          <input class="form__field--text" type="text" id="types-of-offers-k">
+          <span class="form__field--icon">
+            &#8249;</span>
+          <div id="types-of-offers" class="form__field--input-search-box"></div>
+        </div>
+      </div>
+      <div class="form__field">
+        <div class="form__field--label">
+          <label>Campaign name</label>
+        </div>
+        <div class="form__field--input">
+          <input type="text" id="campaign-name">
+        </div>
+      </div>
+      <div class="form__field">
+        <div class="form__field--label">
+          <label>Type of communication</label>
+        </div>
+        <div class="form__field--input-drop fixed">
+          <input class="form__field--text" type="text" id="communication-type-k" readonly>
+          <span class="form__field--icon fixed" id="communication-type-s">
+            &#8249;</span>
+          <div id="communication-type" class="form__field--input-search-box">
+          </div>
+        </div>
+      </div>
+      <div class="form__field">
+        <div class="form__field--label">
+          <label>Type of product</label>
+        </div>
+        <div class="form__field--input-drop">
+          <input class="form__field--text" type="text" id="types-of-products-k">
+          <span class="form__field--icon">
+            &#8249;</span>
+          <div id="types-of-products" class="form__field--input-search-box">
+          </div>
+        </div>
+      </div>
+      <div class="form__field">
+        <div class="form__field--label">
+          <label>Group campaign</label>
+        </div>
+        <div class="form__field--input-drop fixed">
+          <input type="text" class="form__field--text" id="group-campaign-k" readonly value="False">
+          <span class="form__field--icon fixed" id="group-campaign-s">
+            &#8249;</span>
+          <div id="group-campaign" class="form__field--input-search-box">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
